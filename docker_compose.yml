@@ -1,0 +1,11 @@
+version: '2'
+services:
+  simplehttp:
+    container_name: simplehttp
+    hostname: simplehttp
+    image: simplehttp
+    build: .
+    ports:
+        - "8127:80"
+    volumes:
+        - ./src/:/usr/local/apache2/htdocs/
